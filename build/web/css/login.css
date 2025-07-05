@@ -1,0 +1,73 @@
+body {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100vh; /* Chiều cao của body bằng chiều cao của cửa sổ trình duyệt */
+    margin: 0; /* Loại bỏ khoảng cách mặc định của trình duyệt */
+    overflow: hidden; /* Ẩn phần dư thừa */
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/premium-vector/bronze-drum-pattern_531934-625.jpg?w=1480);
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ khu vực */
+    background-position: center; 
+    filter: blur(0.8px); /* Làm mờ hình nền */
+    z-index: -1; /* Đặt hình nền phía sau nội dung */
+}
+
+.container {
+    height: 350px;
+    width: 350px;
+    background: white; 
+    padding: 30px 15px; /* Khoảng cách bên trong khung */
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng cho khung */
+    text-align: center; /* Canh giữa nội dung bên trong khung */
+    opacity: 0.9; /* Tăng độ trong suốt của khung nếu cần */
+    position: relative; /* Đặt vị trí tương đối để căn chỉnh hình cờ */
+    margin-top: 200px; /* Khoảng cách phía trên của khung để có chỗ cho hình cờ */
+}
+.flag {
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng cho hình cờ */
+    margin-top: 80px;
+    width: 250px; 
+    height: 150px;
+    margin-bottom:  80px; /* Khoảng cách dưới hình cờ để nó nằm trên khung */
+    border-radius: 10px;
+    position: absolute; /* Đặt vị trí tuyệt đối để căn chỉnh hình cờ */
+    top: 0; /* Căn chỉnh hình cờ lên trên khung */
+}
+input {
+    display: block;
+    justify-content: center;
+    width: 95%; /* Chiều rộng của ô nhập bằng 100% khung */
+    padding: 10px; /* Khoảng cách bên trong ô nhập */
+    margin: 30px 0; /* Khoảng cách trên và dưới ô nhập */
+    border: 1px solid #ccc; /* Đường viền cho ô nhập */
+    border-radius: 8px; 
+}
+button {
+    padding: 10px; /* Khoảng cách bên trong nút */
+    border: none; 
+    border-radius: 5px; /* Bo tròn các góc của nút */
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột qua nút */
+    width: 100%; 
+    margin-bottom: 30px;
+}
+input:hover {
+    background-color: #0056b3; /* Thay đổi màu nền khi di chuột qua nút */
+}
+.links {
+    display: block;
+    margin-top: 10px; /* Khoảng cách phía trên của các liên kết */
+}

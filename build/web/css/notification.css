@@ -1,0 +1,175 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 8, 2025, 10:57:28 PM
+    Author     : FPT Shop
+*/
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #a30f1b;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.header h5 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+}
+.header .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item:hover {
+    background-color: #f8d7da;
+}
+.container-fluid {
+    margin-top: 60px;
+    padding: 0 10px;
+}
+.sidebar {
+    background-color: #f1e4d3;
+    height: 100vh;
+    padding: 15px;
+    position: fixed;
+    top: 60px;
+    width: 16.67%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background 0.3s, padding-left 0.3s;
+}
+.sidebar a:hover {
+    background-color: #e0c3a5;
+    padding-left: 15px;
+}
+.main-content {
+    margin-left: 16.67%;
+    padding: 20px;
+}
+.notification-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.notification-container h2 {
+    color: #a30f1b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card-custom {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+.card-custom h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-custom p {
+    color: #666;
+    margin: 0;
+}
+.btn-primary {
+    background-color: #a30f1b;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background-color: #8c0e17;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .header h5 {
+        display: none;
+    }
+    .header .menu-toggle {
+        display: block;
+    }
+    .sidebar {
+        width: 200px;
+        transform: translateX(-100%);
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .container-fluid {
+        margin-top: 50px;
+    }
+    .notification-container {
+        padding: 20px;
+    }
+    .card-custom {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 8px 10px;
+    }
+    .sidebar {
+        width: 180px;
+    }
+    .notification-container {
+        padding: 15px;
+    }
+    .card-custom {
+        padding: 8px;
+    }
+    .btn-primary {
+        padding: 6px 12px;
+    }
+}
+
